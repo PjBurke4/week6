@@ -57,7 +57,7 @@ var Stamen_TonerLite = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/to
 }).addTo(map);
 
 // load Chicago ELC GeoJSON File
-$.getJSON("/Users/patrickburke/Documents/PHD Classes/Chicago_Early_Learning_Programs.geojson",function(data){
+$.getJSON("Chicago_Early_Learning_Programs.geojson",function(data){
 	L.geoJSON(data, {
 		pointToLayer: function(feature, latlng) {
 			var agesColor;
@@ -78,7 +78,7 @@ $.getJSON("/Users/patrickburke/Documents/PHD Classes/Chicago_Early_Learning_Prog
 			}).addTo(map);
 		});
 				
-$.getJSON("/Users/patrickburke/Documents/PHD Classes/ChicagoHardshipIndex.geojson",function(data){
+$.getJSON("ChicagoHardshipIndex.geojson",function(data){
   	L.geoJson(data, {
 		style: function(feature){
 			var conditionalColor,
