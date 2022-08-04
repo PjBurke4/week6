@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 	
 
- <! - -Call Leaflet: - ->
+
 			<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
    				integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
    				crossorigin=""/>
@@ -42,20 +42,48 @@ var OpenStreetMap_DE = L.tileLayer('https://{s}.tile.openstreetmap.de/{z}/{x}/{y
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-var marker = L.marker([41.86, -87.66]).addTo(map).bindPopup('Chicago')
+var marker = L.marker([41.897953, -87.724018]).addTo(map).bindPopup("West Humboldt Drug Market")
+
+var myPolygon = L.polygon([
+	[41.902563, -87.746097],
+	[41.902926, -87.706739],
+	[41.888551, -87.706280],
+	[41.887722, -87.735722],
+	], {
+		color: 'grey',
+		fillColor: 'green',
+	}
+
+
+	).addTo(map).bindPopup("West Humboldt Park Drug Market");
+
+var marker = L.marker([41.859656, -87.712313]).addTo(map).bindPopup("North Lawndale Drug Market")
+
+var myPolygon = L.polygon([
+	[41.871092, -87.744635],
+	[41.875010, -87.691588],
+	[41.863415, -87.690622],
+	[41.844699, -87.743883],
+	], {
+		color: 'grey',
+		fillColor: 'red',
+	}
+
+
+	).addTo(map).bindPopup("North Lawndale Drug Market");
 
 var myPolygon = L.polygon([
 	[41.66, -87.11],
 	[41.73, -87.06],
 	[41.96, -87.31],
 	[41.41, -87.47],
-	]. {
-		color: 'Red'
-		fillcolor 'Blue'
+	], {
+		color: 'red',
+		fillColor: 'blue',
 	}
 
 
-	).addTo(map).bindPopup('This is the Indiana Triangle');
+	).addTo(map).bindPopup("This is the Indiana Triangle");
 
 </script>
 
