@@ -95,8 +95,25 @@ $.getJSON("ChicagoHardshipIndex.geojson",function(data){
 							fillOpacity: .6 };
 				},
 				onEachFeature: function( feature, layer ){
-				    layer.bindPopup( "Neighborhood: " + feature.properties.CA + "<br/>" + "Hardship Index Score: " + feature.properties.HI )
+				    layer.bindPopup( "COMMUNITY AREA NAME: " + feature.properties.CA + "<br/>" + "HARDSHIP INDEX: " + feature.properties.HI )
 				}
+  					}  ).addTo(map).bringToBack();
+				}); 
+
+$.getJSON("Drug_Spots_Chicago_With_Shootings_for_2022.geojson",function(data){
+  	L.geoJson(data, {
+		style: function(feature){
+			var conditionalColor,
+			hardship = feature.properties.HI;
+				if ( hardship > 50 ) conditionalColor = "#006888";
+				else if ( hardship > 25 ) conditionalColor = "#31a355";
+				else if ( hardship > 10 ) conditionalColor = "#78c680";
+			 // no data
+				return { 	color: "#999", 
+							weight: 1, 
+							fillColor: conditionalColor, 
+							fillOpacity: .10 };
+			
   					}  ).addTo(map).bringToBack();
 				}); 
 </script>
