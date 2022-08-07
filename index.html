@@ -100,17 +100,6 @@ $.getJSON("ChicagoHardshipIndex.geojson",function(data){
   					}  ).addTo(map).bringToBack();
 				}); 
 
-$.getJSON("Drug_Spots_Chicago_With_Shootings_for_2022.geojson",function(data){
-  	L.geoJson(data, {
-		style: function(feature){
-			var conditionalColor,
-			hardship = feature.properties.HI;
-				if ( hardship > 50 ) conditionalColor = "#006888";
-				else if ( hardship > 25 ) conditionalColor = "#31a355";
-				else if ( hardship > 10 ) conditionalColor = "#78c680";
-			
-  					}  ).addTo(map).bringToBack();
-				}); 
 </script>
 
 </div>
