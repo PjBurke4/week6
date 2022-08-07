@@ -108,11 +108,6 @@ $.getJSON("Drug_Spots_Chicago_With_Shootings_for_2022.geojson",function(data){
 				if ( hardship > 50 ) conditionalColor = "#006888";
 				else if ( hardship > 25 ) conditionalColor = "#31a355";
 				else if ( hardship > 10 ) conditionalColor = "#78c680";
-			 // no data
-				return { 	color: "#999", 
-							weight: 1, 
-							fillColor: conditionalColor, 
-							fillOpacity: .10 };
 			
   					}  ).addTo(map).bringToBack();
 				}); 
